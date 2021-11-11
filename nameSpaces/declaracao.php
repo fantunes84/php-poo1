@@ -8,3 +8,7 @@ $sms = new \SMS\Envio;
 
 var_dump($email);
 var_dump($sms);
+
+echo "Versão: " . \SMS\VERSAO . "<br>";
+
+\SMS\validar("teste@mail.com");
