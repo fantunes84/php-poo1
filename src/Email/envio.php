@@ -7,7 +7,11 @@ class Envio
     public function enviar(): void
     {
         $adaptador = new Adaptadores\Mailgun\Adaptador;
-        var_dump($adaptador);
+
+        $obj = new \stdClass;
+        $cli = new \Cliente;
+
+        var_dump($adaptador, $obj, $cli);
     }
 }
 
