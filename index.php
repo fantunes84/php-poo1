@@ -13,6 +13,9 @@ $prod2->titulo = 'Itaipava';
 // $prod2->descricao = 'Cerveja Brasileira';
 $prod2->preco = 1.90;
 
+var_dump($prod1);
+var_dump($prod2);
+
 $cli = new Cliente;
 $cli->nome = "João";
 $cli->idade = 40;
@@ -21,5 +24,17 @@ $cli->telefone = "(11) 99999-9999";
 
 $cli->comprar();
 
-var_dump($prod1);
-var_dump($prod2);
+$nomeClasse = "Produto";
+
+$instancia = new $nomeClasse;
+var_dump($instancia);
+
+$cli2 = new $cli;
+
+$nomeClasse2 = get_class($cli);
+$cli3 = new $nomeClasse2;
+$cli3->nome = "Maria";
+
+var_dump($cli);
+var_dump($cli2);
+var_dump($cli3);
