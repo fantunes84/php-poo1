@@ -2,6 +2,9 @@
 
 namespace Email;
 
+use Email\Adaptadores\Mailgun\Adaptador as Mailgun;
+use Email\Adaptadores\Mailgun\Adaptador as SES;
+
 class Envio
 {
     public function enviar(): void
@@ -12,6 +15,16 @@ class Envio
         $cli = new \Cliente;
 
         var_dump($adaptador, $obj, $cli);
+    }
+
+    public function m1()
+    {
+        $adaptador = new Mailgun;
+    }
+
+    public function m2()
+    {
+        $adaptador = new SES;
     }
 }
 
